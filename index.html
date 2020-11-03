@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3D圆柱体</title>
+</head>
+
+<style>
+    
+</style>
+
+<body>
+    <main>
+        <div class="cylinder">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </main>
+    
+</body>
+
+<style type="text/css">
+    body {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        perspective: 800px;
+    }
+
+    .cylinder {
+        transform-style: preserve-3d;
+        position: relative;
+        margin: 200px auto 0px;
+        width: 400px;
+        height: 400px;
+        animation: spin 8s linear infinite;
+    }
+    .cylinder>div {
+        background-color: red;
+        opacity: 0.3;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border: 2px solid #0af;
+    }
+    @keyframes spin {
+        100% {
+            transform: rotateY(-360deg);
+        }
+    }
+    .cylinder>div:nth-child(1) {
+        transform: rotateX(-90deg) translateZ(200px);
+        border-radius: 50%;
+        
+    }
+    .cylinder>div:nth-child(2) {
+        transform: rotateX(90deg) translateZ(200px);
+        border-radius: 50%;
+    }
+    .cylinder>div:nth-child(3) {
+        transform: rotateY(-90deg) translateZ(0px);
+        
+    }
+    .cylinder>div:nth-child(4) {
+        transform: rotateY(0deg) translateZ(0px);
+    }
+    .cylinder>div:nth-child(5) {
+        transform: rotateY(45deg) translateZ(0px);
+    }
+    .cylinder>div:nth-child(6) {
+        transform: rotateY(-45deg) translateZ(0px);
+    }
+
+</style>
+</html>
